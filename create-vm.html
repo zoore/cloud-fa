@@ -22,8 +22,13 @@
 	<!--slider-->
 	<link rel="stylesheet" href="assets/vendor/slider/css/bootstrap-slider.min.css">
 	<link rel="stylesheet" href="assets/vendor/slider/css/highlightjs-github-theme.css">
+	<!--spinner-->
+	<link rel="stylesheet" href="assets/vendor/spinner/css/bootstrap-spinner.min.css">
 	<!--custom-->
 	<style type="text/css" rel="stylesheet">
+			#create-vm {
+				width: 1550px;
+			}
 		/*分类标题*/
 		.panel .panel-body .form-horizontal h4{
 			margin-top: 30px;
@@ -47,8 +52,11 @@
         /*购买提示信息*/
         #purchase{
             position: fixed;
-            top: 109px;
-            right: 20px;
+            top: 108px;
+            right: 25px;
+			width: 310px;
+			z-index: 10;
+			/*background: #FFFFFF;*/
         }
 
 	</style>
@@ -148,7 +156,7 @@
 			<div class="main-content">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col-lg-10">
+						<div class="col-md-10" id="create-vm">
 							<!-- TABLE HOVER -->
 							<div class="panel">
 								<div class="panel-heading">
@@ -273,7 +281,7 @@
 											<div class="col-md-3">
 												<input id="ex13" style="width: 100%;"/>
 											</div>
-											<div class="col-md-2 col-md-offset-4 input-group">
+											<div class="col-md-1 col-md-offset-4 input-group">
 												<input id="disk-value" class="form-control"/>
 												<span class="input-group-addon">G</span>
 											</div>
@@ -370,26 +378,35 @@
 										</div>
 										<!--管理设置 begin-->
 									</form>
-							</div>
+								</div>
 							<!-- END TABLE HOVER -->
+							</div>
 						</div>
+					</div>
 					</div>
 
 					<!--三栏最右侧 begin-->
-					<div class="col-lg-2" id="purchase">
-						<div class="panel">
+					<div id="purchase">
+						<div class="panel panel-default">
 							<div class="panel-body">
 								<form class="form-horizontal" role="form">
 									<div class="form-group">
-										<label class="col-sm-8 control-label">购买数量</label>
-										<div class="col-sm-4">
-											<input class="form-control" placeholder="1"/>
+										<label class="col-sm-4 control-label">购买数量</label>
+										<div class="col-sm-8">
+											<!--<input class="form-control" placeholder="1"/>-->
+											<div class="input-group spinner" data-trigger="spinner" id="spinner">
+												<input type="text" class="form-control" value="1" data-max="5" data-min="1" data-step="1">
+												<div class="input-group-addon">
+													<a href="javascript:;" class="spin-up" data-spin="up"><i class="fa fa-caret-up"></i></a>
+													<a href="javascript:;" class="spin-down" data-spin="down"><i class="fa fa-caret-down"></i></a>
+												</div>
+											</div>
 										</div>
 									</div>
 									<div class="form-group">
 										<label class="col-sm-8 control-label">云主机配额</label>
 										<div class="col-sm-4">
-											<span class="small">1/5</span>
+											<span class="small text-right">1/5</span>
 										</div>
 									</div>
 									<div class="form-group">
@@ -414,7 +431,7 @@
 									<div class="form-group">
 										<div class="col-sm-8 col-sm-offset-4">
 											<select class="form-control">
-												<option>购置月末</option>
+												<option>购至月末</option>
 												<option>1个月</option>
 												<option>2个月</option>
 											</select>
@@ -424,7 +441,7 @@
 									<div class="form-group">
 										<label class="col-sm-5 control-label">合计费用</label>
 										<div class="col-sm-7">
-											<span class="label label-primary" style="font-size: 18px;">88.88</span>
+											<span class="label label-primary" style="font-size: 18px;">￥88.88</span>
 										</div>
 									</div>
                                     <br/>
@@ -442,8 +459,8 @@
 					</div>
 
 					<!--三栏最右侧 begin-->
-				</div>
-			</div>
+
+
 			<!-- END MAIN CONTENT -->
 		</div>
 		<!-- END MAIN -->
@@ -458,6 +475,7 @@
 	<!-- END WRAPPER -->
 	<!-- Javascript -->
 	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/spinner/js/jquery.spinner.min.js"></script>
 	<script src="assets/vendor/slider/js/modernizr.js"></script>
 	<script src="assets/vendor/slider/js/highlight.min.js"></script>
 	<script src="assets/vendor/slider/js/bootstrap-slider.min.js"></script>
@@ -468,6 +486,8 @@
 		});
 
 		// 初始化
+		$('.spinner').spinner();
+
 		$("#ex13").slider({
 			ticks: [0, 100, 200, 300, 400, 500],
 			ticks_labels: ['0', '100', '200', '300', '400', '500'],

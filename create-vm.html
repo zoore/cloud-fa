@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Tables | Klorofil - Free Bootstrap Dashboard Template</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<!-- VENDOR CSS -->
+	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	<!-- MAIN CSS -->
+	<link rel="stylesheet" href="assets/css/main.css">
+	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+	<link rel="stylesheet" href="assets/css/demo.css">
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- ICONS -->
+	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<!--slider-->
+	<link rel="stylesheet" href="assets/vendor/slider/css/bootstrap-slider.min.css">
+	<link rel="stylesheet" href="assets/vendor/slider/css/highlightjs-github-theme.css">
+	<!--custom-->
+	<style type="text/css" rel="stylesheet">
+		/*分类标题*/
+		.panel .panel-body .form-horizontal h4{
+			margin-top: 30px;
+			margin-bottom: -10px;
+			font-size: 12px;
+			font-weight: bold;
+		}
+		/*水平分割线*/
+		.panel .panel-body .form-horizontal hr{
+			border: 1px solid #E0EEFF;
+		}
+		/*项目标签*/
+		.panel .panel-body .form-group .col-md-1.control-label{
+			font-weight: normal;
+			font-size: 12px;
+		}
+		.panel .panel-body .form-group .control-label{
+			font-weight: normal;
+			font-size: 12px;
+		}
+        /*购买提示信息*/
+        #purchase{
+            position: fixed;
+            top: 109px;
+            right: 20px;
+        }
+
+	</style>
+</head>
+
+<body class="layout-fullwidth">
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="index.html"><img src="assets/img/logo-dark.png" alt="Klorofil Logo" class="img-responsive logo"></a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-right-circle"></i></button>
+				</div>
+				<form class="navbar-form navbar-left">
+					<div class="input-group">
+						<input type="text" value="" class="form-control" placeholder="Search dashboard...">
+						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
+					</div>
+				</form>
+				<div id="navbar-menu">
+					<ul class="nav navbar-nav navbar-right">
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle icon-menu" data-toggle="dropdown">
+								<i class="lnr lnr-alarm"></i>
+								<span class="badge bg-danger">5</span>
+							</a>
+							<ul class="dropdown-menu notifications">
+								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>System space is almost full</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-danger"></span>You have 9 unfinished tasks</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Monthly report is available</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-warning"></span>Weekly meeting in 1 hour</a></li>
+								<li><a href="#" class="notification-item"><span class="dot bg-success"></span>Your request has been approved</a></li>
+								<li><a href="#" class="more">See all notifications</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="lnr lnr-question-circle"></i> <span>Help</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="#">Basic Use</a></li>
+								<li><a href="#">Working With Data</a></li>
+								<li><a href="#">Security</a></li>
+								<li><a href="#">Troubleshooting</a></li>
+							</ul>
+						</li>
+						<li class="dropdown">
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="assets/img/user.png" class="img-circle" alt="Avatar"> <span>Samuel</span> <i class="icon-submenu lnr lnr-chevron-down"></i></a>
+							<ul class="dropdown-menu">
+								<li><a href="#"><i class="lnr lnr-user"></i> <span>My Profile</span></a></li>
+								<li><a href="#"><i class="lnr lnr-envelope"></i> <span>Message</span></a></li>
+								<li><a href="#"><i class="lnr lnr-cog"></i> <span>Settings</span></a></li>
+								<li><a href="#"><i class="lnr lnr-exit"></i> <span>Logout</span></a></li>
+							</ul>
+						</li>
+						<!-- <li>
+							<a class="update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
+						</li> -->
+					</ul>
+				</div>
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEBAR -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li><a href="index.html" class=""><i class="lnr lnr-home"></i> <span>首页</span></a></li>
+						<li><a href="elements.html" class=""><i class="lnr lnr-code"></i> <span>云主机</span></a></li>
+						<li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i> <span>网络</span></a></li>
+						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
+						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+						<li>
+							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="subPages" class="collapse ">
+								<ul class="nav">
+									<li><a href="page-profile.html" class="">Profile</a></li>
+									<li><a href="login.html" class="">Login</a></li>
+									<li><a href="page-lockscreen.html" class="">Lockscreen</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="tables.html" class="active"><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
+						<li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
+						<li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEBAR -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-lg-10">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+                                    <h2 class="panel-title">创建主机</h2>
+								</div>
+								<div class="panel-body">
+									<!--创建主机配置选项开始-->
+									<form class="form-horizontal" role="form">
+										<!--地域 begin-->
+										<h4>地域</h4>
+										<hr/>
+										<div class="form-group">
+											<label class="col-md-1 control-label">地域</label>
+											<div class="col-md-10">
+                                                <div class="btn-group btn-group-sm">
+                                                    <button type="button" class="btn btn-default">南京</button>
+                                                    <button type="button" class="btn btn-default">上海</button>
+                                                </div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">可用区</label>
+											<div class="col-md-10">
+                                                <div class="btn-group btn-group-sm">
+                                                    <button type="button" class="btn btn-default">可用区A</button>
+                                                    <button type="button" class="btn btn-default">可用区B</button>
+                                                </div>
+											</div>
+										</div>
+										<!--地域 end-->
+
+										<!--基础配置 begin-->
+										<h4>基础配置</h4>
+										<hr/>
+										<div class="form-group">
+											<label class="col-md-1 control-label">系列</label>
+											<div class="col-md-10">
+												<div class="btn-group btn-group-sm">
+													<button type="button" class="btn btn-default">系列1</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">机型</label>
+											<div class="col-md-10">
+												<div class="btn-group btn-group-sm">
+													<button type="button" class="btn btn-default">标准型</button>
+													<button type="button" class="btn btn-default">高IO型</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">网络增强</label>
+											<div class="col-md-10">
+												<div class="btn-group btn-group-sm">
+													<button type="button" class="btn btn-default">ON</button>
+													<button type="button" class="btn btn-default">OFF</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">CPU</label>
+											<div class="col-md-10">
+												<div class="btn-group btn-group-sm">
+													<button type="button" class="btn btn-default">1核</button>
+													<button type="button" class="btn btn-default">2核</button>
+													<button type="button" class="btn btn-default">4核</button>
+													<button type="button" class="btn btn-default">8核</button>
+													<button type="button" class="btn btn-default">16核</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">内存</label>
+											<div class="col-md-10">
+												<div class="btn-group btn-group-sm">
+													<button type="button" class="btn btn-default">2G</button>
+													<button type="button" class="btn btn-default">4G</button>
+													<button type="button" class="btn btn-default">6G</button>
+													<button type="button" class="btn btn-default">8G</button>
+													<button type="button" class="btn btn-default">12G</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">镜像</label>
+											<div class="col-md-10">
+												<div class="btn-group btn-group-sm">
+													<button type="button" class="btn btn-default">标准</button>
+													<button type="button" class="btn btn-default">自制</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<div class="col-md-2 col-md-offset-1">
+												<select class="form-control">
+													<option>Centos5</option>
+													<option>Centos6</option>
+													<option>Centos7</option>
+													<option>Centos8</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">存储类型</label>
+											<div class="col-md-10">
+												<div class="btn-group btn-group-sm">
+													<button type="button" class="btn btn-default">本地普通盘</button>
+													<button type="button" class="btn btn-default">云硬盘</button>
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">系统盘</label>
+											<div class="col-md-10">
+												<span class="small">20GB 创建后可通过“更改配置”操作扩容</span>
+											</div>
+
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">数据盘</label>
+											<div class="col-md-3">
+												<input id="ex13" style="width: 100%;"/>
+											</div>
+											<div class="col-md-2 col-md-offset-4 input-group">
+												<input id="disk-value" class="form-control"/>
+												<span class="input-group-addon">G</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">数据方舟</label>
+											<div class="col-md-10">
+												<div class="btn-group btn-group-sm">
+													<button type="button" class="btn btn-default">ON</button>
+													<button type="button" class="btn btn-default">OFF</button>
+												</div>
+											</div>
+										</div>
+										<!--基础配置 end-->
+
+										<!--网络设置 begin-->
+										<h4>网络设置</h4>
+										<hr/>
+										<div class="form-group">
+											<label class="col-md-1 control-label">所属VPC</label>
+											<div class="col-md-2">
+												<select class="col-md-1 form-control">
+													<option>DefaultVPC</option>
+													<option>MyVPC</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">所属子网</label>
+											<div class="col-md-2">
+												<select class="col-md-1 form-control">
+													<option>DefaultNetwork(10.23.0.0/16)</option>
+													<option>MyVPC</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">外网弹性IP</label>
+											<div class="col-md-5">
+												<input type="checkbox"/>购买并绑定
+												<div class="alert alert-info">
+													<a href="#" class="close" data-dismiss="alert">&times;</a>
+													不购买弹性EIP，则该主机仅支持内网访问，您也可以稍后购买弹性IP并手动绑定到主机上。
+												</div>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">防火墙</label>
+											<div class="col-md-2">
+												<select class="col-md-1 form-control">
+													<option>非Web服务器推荐</option>
+													<option>Web服务器推荐</option>
+												</select>
+											</div>
+										</div>
+										<!--网络设置 end-->
+
+										<!--管理设置 begin-->
+										<h4>管理设置</h4>
+										<hr/>
+										<div class="form-group">
+											<label class="col-md-1 control-label">业务组</label>
+											<div class="col-md-2">
+												<select class="col-md-1 form-control">
+													<option>未分组</option>
+													<option>新建业务组</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">主机名称</label>
+											<div class="col-md-2">
+												<input class="form-control"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">默认管理员</label>
+											<div class="col-md-6">
+												<span class="label label-info" style="font-size: 18px;">root</span>
+												<span class="label label-default">若在系统内更改了管理员用户名，则无法在控制台中重置管理员密码</span>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">管理员密码</label>
+											<div class="col-md-2">
+												<input class="form-control" type="password"/>
+											</div>
+										</div>
+										<div class="form-group">
+											<label class="col-md-1 control-label">确认密码</label>
+											<div class="col-md-2">
+												<input class="form-control" type="password"/>
+											</div>
+										</div>
+										<!--管理设置 begin-->
+									</form>
+							</div>
+							<!-- END TABLE HOVER -->
+						</div>
+					</div>
+
+					<!--三栏最右侧 begin-->
+					<div class="col-lg-2" id="purchase">
+						<div class="panel">
+							<div class="panel-body">
+								<form class="form-horizontal" role="form">
+									<div class="form-group">
+										<label class="col-sm-8 control-label">购买数量</label>
+										<div class="col-sm-4">
+											<input class="form-control" placeholder="1"/>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-8 control-label">云主机配额</label>
+										<div class="col-sm-4">
+											<span class="small">1/5</span>
+										</div>
+									</div>
+									<div class="form-group">
+										<label class="col-sm-8 control-label">弹性IP配额</label>
+										<div class="col-sm-4">
+											<span class="small">1/5</span>
+										</div>
+									</div>
+									<hr/>
+									<div class="form-group">
+										<label class="control-label">付费方式</label>
+									</div>
+                                    <div class="form-group">
+                                        <div class="col-sm-8 col-sm-offset-4">
+                                            <select class="form-control">
+                                                <option>月付</option>
+                                                <option>年付</option>
+                                                <option>按时</option>
+                                            </select>
+                                        </div>
+                                    </div>
+									<div class="form-group">
+										<div class="col-sm-8 col-sm-offset-4">
+											<select class="form-control">
+												<option>购置月末</option>
+												<option>1个月</option>
+												<option>2个月</option>
+											</select>
+										</div>
+									</div>
+									<hr/>
+									<div class="form-group">
+										<label class="col-sm-5 control-label">合计费用</label>
+										<div class="col-sm-7">
+											<span class="label label-primary" style="font-size: 18px;">88.88</span>
+										</div>
+									</div>
+                                    <br/>
+									<div class="form-group">
+										<div class="col-sm-5">
+                                            <a class="btn btn-primary">立即购买</a>
+										</div>
+										<div class="col-sm-5">
+                                            <a class="btn btn-default">加入清单</a>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+					<!--三栏最右侧 begin-->
+				</div>
+			</div>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN -->
+		<div class="clearfix"></div>
+		<footer>
+			<div class="container-fluid">
+				<p class="copyright">&copy; 2017 <a href="#" target="_blank">Theme I Need</a>. All Rights Reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+			</div>
+		</footer>
+	</div>
+	</div>
+	<!-- END WRAPPER -->
+	<!-- Javascript -->
+	<script src="assets/vendor/jquery/jquery.min.js"></script>
+	<script src="assets/vendor/slider/js/modernizr.js"></script>
+	<script src="assets/vendor/slider/js/highlight.min.js"></script>
+	<script src="assets/vendor/slider/js/bootstrap-slider.min.js"></script>
+	<script>
+		// 将值放入输入框
+		$(function() {
+			$("#disk-value").val($("#ex13").val());
+		});
+
+		// 初始化
+		$("#ex13").slider({
+			ticks: [0, 100, 200, 300, 400, 500],
+			ticks_labels: ['0', '100', '200', '300', '400', '500'],
+			step: 10,
+			value: 50
+		});
+		// 绑定slider事件
+		$("#ex13").on("slide", function(slideEvt) {
+			$("#disk-value").val(slideEvt.value);
+		});
+	</script>
+	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+	<script src="assets/scripts/klorofil-common.js"></script>
+</body>
+
+</html>

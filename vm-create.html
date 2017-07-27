@@ -13,7 +13,7 @@
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
-	<link rel="stylesheet" href="assets/css/demo.css">
+	<!--<link rel="stylesheet" href="assets/css/demo.css">-->
 	<!-- GOOGLE FONTS -->
 	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
 	<!-- ICONS -->
@@ -25,42 +25,7 @@
 	<!--spinner-->
 	<link rel="stylesheet" href="assets/vendor/spinner/css/bootstrap-spinner.min.css">
 	<!--custom-->
-	<style type="text/css" rel="stylesheet">
-		/*分类标题*/
-		.panel .panel-body .form-horizontal h4{
-			margin-top: 30px;
-			margin-bottom: -10px;
-			font-size: 12px;
-			font-weight: bold;
-		}
-		/*水平分割线*/
-		.panel .panel-body .form-horizontal hr{
-			border: 1px solid #E0EEFF;
-		}
-		/*项目标签*/
-		.panel .panel-body .form-group .col-md-1.control-label{
-			font-weight: normal;
-			font-size: 12px;
-		}
-		.panel .panel-body .form-group .control-label{
-			font-weight: normal;
-			font-size: 12px;
-		}
-        /*购买提示信息*/
-        #purchase{
-            position: fixed;
-            top: 108px;
-            right: 5px;
-			/*background: #FFFFFF;*/
-        }
-
-		@media screen and (max-width: 996px) {
-			#purchase{
-				position: static;
-			}
-		}
-
-	</style>
+    <link rel="stylesheet" href="assets/css/vm.css">
 </head>
 
 <body class="layout-fullwidth">
@@ -170,7 +135,7 @@
 										<h4>地域</h4>
 										<hr/>
 										<div class="form-group">
-											<label class="col-md-1 control-label">地域</label>
+											<label class="col-md-2 control-label text-right">地域</label>
 											<div class="col-md-10">
                                                 <div class="btn-group btn-group-sm">
                                                     <button type="button" class="btn btn-default">南京</button>
@@ -179,7 +144,7 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">可用区</label>
+											<label class="col-md-2 control-label">可用区</label>
 											<div class="col-md-10">
                                                 <div class="btn-group btn-group-sm">
                                                     <button type="button" class="btn btn-default">可用区A</button>
@@ -193,7 +158,7 @@
 										<h4>基础配置</h4>
 										<hr/>
 										<div class="form-group">
-											<label class="col-md-1 control-label">系列</label>
+											<label class="col-md-2 control-label">系列</label>
 											<div class="col-md-10">
 												<div class="btn-group btn-group-sm">
 													<button type="button" class="btn btn-default">系列1</button>
@@ -201,7 +166,7 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">机型</label>
+											<label class="col-md-2 control-label">机型</label>
 											<div class="col-md-10">
 												<div class="btn-group btn-group-sm">
 													<button type="button" class="btn btn-default">标准型</button>
@@ -210,7 +175,7 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">网络增强</label>
+											<label class="col-md-2 control-label">网络增强</label>
 											<div class="col-md-10">
 												<div class="btn-group btn-group-sm">
 													<button type="button" class="btn btn-default">ON</button>
@@ -219,7 +184,7 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">CPU</label>
+											<label class="col-md-2 control-label">CPU</label>
 											<div class="col-md-10">
 												<div class="btn-group btn-group-sm">
 													<button type="button" class="btn btn-default">1核</button>
@@ -231,7 +196,7 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">内存</label>
+											<label class="col-md-2 control-label">内存</label>
 											<div class="col-md-10">
 												<div class="btn-group btn-group-sm">
 													<button type="button" class="btn btn-default">2G</button>
@@ -243,26 +208,23 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">镜像</label>
-											<div class="col-md-10">
+											<label class="col-md-2 control-label">镜像</label>
+											<div class="col-md-4">
 												<div class="btn-group btn-group-sm">
 													<button type="button" class="btn btn-default">标准</button>
 													<button type="button" class="btn btn-default">自制</button>
 												</div>
+                                                <select class="form-control">
+                                                    <option>Centos5</option>
+                                                    <option>Centos6</option>
+                                                    <option>Centos7</option>
+                                                    <option>Centos8</option>
+                                                </select>
 											</div>
 										</div>
+
 										<div class="form-group">
-											<div class="col-md-2 col-md-offset-1">
-												<select class="form-control">
-													<option>Centos5</option>
-													<option>Centos6</option>
-													<option>Centos7</option>
-													<option>Centos8</option>
-												</select>
-											</div>
-										</div>
-										<div class="form-group">
-											<label class="col-md-1 control-label">存储类型</label>
+											<label class="col-md-2 control-label">存储类型</label>
 											<div class="col-md-10">
 												<div class="btn-group btn-group-sm">
 													<button type="button" class="btn btn-default">本地普通盘</button>
@@ -271,24 +233,24 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">系统盘</label>
+											<label class="col-md-2 control-label">系统盘</label>
 											<div class="col-md-10">
 												<span class="small">20GB 创建后可通过“更改配置”操作扩容</span>
 											</div>
 
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">数据盘</label>
+											<label class="col-md-2 control-label">数据盘</label>
 											<div class="col-md-3">
 												<input id="ex13" style="width: 100%;"/>
 											</div>
-											<div class="col-md-1 col-md-offset-4 input-group">
+											<div class="col-md-2 col-md-offset-6 input-group disk-container">
 												<input id="disk-value" class="form-control"/>
 												<span class="input-group-addon">G</span>
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">数据方舟</label>
+											<label class="col-md-2 control-label">数据方舟</label>
 											<div class="col-md-10">
 												<div class="btn-group btn-group-sm">
 													<button type="button" class="btn btn-default">ON</button>
@@ -302,8 +264,8 @@
 										<h4>网络设置</h4>
 										<hr/>
 										<div class="form-group">
-											<label class="col-md-1 control-label">所属VPC</label>
-											<div class="col-md-2">
+											<label class="col-md-2 control-label">所属VPC</label>
+											<div class="col-md-4">
 												<select class="col-md-1 form-control">
 													<option>DefaultVPC</option>
 													<option>MyVPC</option>
@@ -311,8 +273,8 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">所属子网</label>
-											<div class="col-md-2">
+											<label class="col-md-2 control-label">所属子网</label>
+											<div class="col-md-4">
 												<select class="col-md-1 form-control">
 													<option>DefaultNetwork(10.23.0.0/16)</option>
 													<option>MyVPC</option>
@@ -320,8 +282,8 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">外网弹性IP</label>
-											<div class="col-md-5">
+											<label class="col-md-2 control-label">外网弹性IP</label>
+											<div class="col-md-8">
 												<input type="checkbox"/>购买并绑定
 												<div class="alert alert-info">
 													<a href="#" class="close" data-dismiss="alert">&times;</a>
@@ -330,8 +292,8 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">防火墙</label>
-											<div class="col-md-2">
+											<label class="col-md-2 control-label">防火墙</label>
+											<div class="col-md-4">
 												<select class="col-md-1 form-control">
 													<option>非Web服务器推荐</option>
 													<option>Web服务器推荐</option>
@@ -344,8 +306,8 @@
 										<h4>管理设置</h4>
 										<hr/>
 										<div class="form-group">
-											<label class="col-md-1 control-label">业务组</label>
-											<div class="col-md-2">
+											<label class="col-md-2 control-label">业务组</label>
+											<div class="col-md-4">
 												<select class="col-md-1 form-control">
 													<option>未分组</option>
 													<option>新建业务组</option>
@@ -353,27 +315,27 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">主机名称</label>
-											<div class="col-md-2">
+											<label class="col-md-2 control-label">主机名称</label>
+											<div class="col-md-4">
 												<input class="form-control"/>
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">默认管理员</label>
+											<label class="col-md-2 control-label">默认管理员</label>
 											<div class="col-md-6">
 												<span class="label label-info" style="font-size: 18px;">root</span>
 												<span class="label label-default">若在系统内更改了管理员用户名，则无法在控制台中重置管理员密码</span>
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">管理员密码</label>
-											<div class="col-md-2">
+											<label class="col-md-2 control-label">管理员密码</label>
+											<div class="col-md-4">
 												<input class="form-control" type="password"/>
 											</div>
 										</div>
 										<div class="form-group">
-											<label class="col-md-1 control-label">确认密码</label>
-											<div class="col-md-2">
+											<label class="col-md-2 control-label">确认密码</label>
+											<div class="col-md-4">
 												<input class="form-control" type="password"/>
 											</div>
 										</div>

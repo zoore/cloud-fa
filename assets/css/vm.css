@@ -1,0 +1,49 @@
+/*分类标题*/
+.panel .panel-body .form-horizontal h4{
+    margin-top: 30px;
+    margin-bottom: -10px;
+    font-size: 12px;
+    font-weight: bold;
+}
+/*水平分割线*/
+.panel .panel-body .form-horizontal hr{
+    border: 1px solid #E0EEFF;
+}
+/*项目标签*/
+.panel .panel-body .form-group .col-md-1.control-label{
+    font-weight: normal;
+    font-size: 12px;
+}
+.panel .panel-body .form-group .control-label{
+    font-weight: normal;
+    font-size: 12px;
+}
+/*购买提示信息*/
+#purchase{
+    position: fixed;
+    top: 108px;
+    right: 5px;
+    /*background: #FFFFFF;*/
+}
+
+@media screen and (max-width: 996px) {
+    #purchase{
+        position: static;
+    }
+}
+
+/*处理大屏幕时col-md-2过大、系统选择框偏移过大以及磁盘大小显示容器偏移太大*/
+@media screen and (min-width: 1400px){
+    .panel .panel-body .form-group label.control-label{
+        width: 120px;
+    }
+
+    .panel .panel-body .form-group select.form-control{
+        margin-top: 18px;
+    }
+
+    .panel .panel-body .form-group .disk-container{
+        /*margin-left: 500px;*/
+        margin-left: 40%;
+    }
+}

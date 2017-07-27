@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Notifications | Klorofil - Free Bootstrap Dashboard Template</title>
+	<title>Tables | Klorofil - Free Bootstrap Dashboard Template</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -10,7 +10,6 @@
 	<link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
-	<link rel="stylesheet" href="assets/vendor/toastr/toastr.min.css">
 	<!-- MAIN CSS -->
 	<link rel="stylesheet" href="assets/css/main.css">
 	<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
@@ -20,6 +19,13 @@
 	<!-- ICONS -->
 	<link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
 	<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+	<style type="text/css" rel="stylesheet">
+		.btn-default{
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+	</style>
 </head>
 
 <body>
@@ -40,9 +46,6 @@
 						<span class="input-group-btn"><button type="button" class="btn btn-primary">Go</button></span>
 					</div>
 				</form>
-				<div class="navbar-btn navbar-btn-right">
-					<a class="btn btn-success update-pro" href="#downloads/klorofil-pro-bootstrap-admin-dashboard-template/?utm_source=klorofil&utm_medium=template&utm_campaign=KlorofilPro" title="Upgrade to Pro" target="_blank"><i class="fa fa-rocket"></i> <span>UPGRADE TO PRO</span></a>
-				</div>
 				<div id="navbar-menu">
 					<ul class="nav navbar-nav navbar-right">
 						<li class="dropdown">
@@ -90,11 +93,12 @@
 			<div class="sidebar-scroll">
 				<nav>
 					<ul class="nav">
-						<li><a href="index.html" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="elements.html" class=""><i class="lnr lnr-code"></i> <span>Elements</span></a></li>
-						<li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i> <span>Charts</span></a></li>
-						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>Panels</span></a></li>
-						<li><a href="notifications.html" class="active"><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
+						<li><a href="index.html" class="active"><i class="lnr lnr-home"></i> <span>首页</span></a></li>
+						<li><a href="tables.html" class=""><i class="lnr lnr-code"></i> <span>云主机</span></a></li>
+						<li><a href="charts.html" class=""><i class="lnr lnr-chart-bars"></i> <span>网络</span></a></li>
+						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>模板</span></a></li>
+						<li><a href="panels.html" class=""><i class="lnr lnr-cog"></i> <span>存储</span></a></li>
+						<li><a href="notifications.html" class=""><i class="lnr lnr-alarm"></i> <span>Notifications</span></a></li>
 						<li>
 							<a href="#subPages" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>Pages</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
 							<div id="subPages" class="collapse ">
@@ -105,7 +109,7 @@
 								</ul>
 							</div>
 						</li>
-						<li><a href="tables.html" class=""><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
+						<li><a href="tables.html" class="active"><i class="lnr lnr-dice"></i> <span>Tables</span></a></li>
 						<li><a href="typography.html" class=""><i class="lnr lnr-text-format"></i> <span>Typography</span></a></li>
 						<li><a href="icons.html" class=""><i class="lnr lnr-linearicons"></i> <span>Icons</span></a></li>
 					</ul>
@@ -118,41 +122,83 @@
 			<!-- MAIN CONTENT -->
 			<div class="main-content">
 				<div class="container-fluid">
-					<h3 class="page-title">Notifications</h3>
-					<div id="toastr-demo" class="panel">
-						<div class="panel-body">
-							<!-- CONTEXTUAL -->
-							<h4>Context</h4>
-							<p class="demo-button">
-								<button type="button" class="btn btn-primary btn-toastr" data-context="info" data-message="This is general theme info" data-position="top-right">General Info</button>
-								<button type="button" class="btn btn-success btn-toastr" data-context="success" data-message="This is success info" data-position="top-right">Success Info</button>
-								<button type="button" class="btn btn-warning btn-toastr" data-context="warning" data-message="This is warning info" data-position="top-right">Warning Info</button>
-								<button type="button" class="btn btn-danger btn-toastr" data-context="error" data-message="This is error info" data-position="top-right">Error Info</button>
-							</p>
-							<!-- END CONTEXTUAL -->
-							<br>
-							<!-- POSITION -->
-							<h4>Position</h4>
-							<p class="demo-button">
-								<button type="button" class="btn btn-default btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="bottom-right">Bottom Right</button>
-								<button type="button" class="btn btn-default btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="bottom-left">Bottom Left</button>
-								<button type="button" class="btn btn-default btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="top-left">Top Left</button>
-								<button type="button" class="btn btn-default btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="top-right">Top Right</button>
-								<button type="button" class="btn btn-default btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="top-full-width">Top Full Width</button>
-								<button type="button" class="btn btn-default btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="bottom-full-width">Bottom Full Width</button>
-								<button type="button" class="btn btn-default btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="top-center">Top Center</button>
-								<button type="button" class="btn btn-default btn-toastr" data-context="info" data-message="Hi, I'm here" data-position="bottom-center">Bottom Center</button>
-							</p>
-							<!-- END POSITION -->
-							<br>
-							<!-- CALLBACK -->
-							<h4>Callback</h4>
-							<p class="demo-button">
-								<button type="button" class="btn btn-default btn-toastr-callback" id="toastr-callback1" data-context="info" data-message="onShown and onHidden callback demo">onShown and onHidden</button>
-								<button type="button" class="btn btn-default btn-toastr-callback" id="toastr-callback2" data-context="info" data-message="Please click me">onclick</button>
-								<button type="button" class="btn btn-default btn-toastr-callback" id="toastr-callback3" data-context="info" data-message="Please click close button">onCloseClick</button>
-							</p>
-							<!-- END CALLBACK -->
+					<h3 class="page-title">Tables</h3>
+					<div class="row">
+						<div class="col-md-12">
+							<!-- TABLE HOVER -->
+							<div class="panel">
+								<div class="panel-heading">
+									<a  class="btn btn-primary btn-md" href="vm-create.html">创建主机</a>
+									<a  class="btn btn-default btn-md">启动</a>
+									<a  class="btn btn-default btn-md">关闭</a>
+									<a  class="btn btn-default btn-md">更多</a>
+								</div>
+								<div class="panel-body">
+									<table class="table table-hover">
+										<thead>
+											<tr>
+												<th>#</th>
+												<th>主机名称</th>
+												<th>资源ID</th>
+												<th>业务组</th>
+												<th>所属VPC</th>
+												<th>所属子网</th>
+												<th>基础网络</th>
+												<th>配置</th>
+												<th>机型|特性</th>
+												<th>创建时间</th>
+												<th>状态</th>
+												<th>操作</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td>Server01</td>
+												<td>DSA123LK123342122548</td>
+												<td>G1</td>
+												<td>V1</td>
+												<td>S1</td>
+												<td>网络A</td>
+												<td>2C4G</td>
+												<td>弹性计算</td>
+												<td>2017-07-05</td>
+												<td>使用中</td>
+												<td>开机 | 关机 | 重启</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td>Server02</td>
+												<td>DSA123LK12334212DCSW</td>
+												<td>G2</td>
+												<td>V3</td>
+												<td>S2</td>
+												<td>网络A</td>
+												<td>1C2G</td>
+												<td>弹性计算</td>
+												<td>2017-07-08</td>
+												<td>使用中</td>
+												<td>开机 | 关机 | 重启</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td>Server04</td>
+												<td>DSA123LK12334212SDEW</td>
+												<td>G1</td>
+												<td>V1</td>
+												<td>S1</td>
+												<td>网络A</td>
+												<td>4C8G</td>
+												<td>弹性计算</td>
+												<td>2017-07-08</td>
+												<td>使用中</td>
+												<td>开机 | 关机 | 重启</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- END TABLE HOVER -->
 						</div>
 					</div>
 				</div>
@@ -172,7 +218,6 @@
 	<script src="assets/vendor/jquery/jquery.min.js"></script>
 	<script src="assets/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="assets/vendor/jquery-slimscroll/jquery.slimscroll.min.js"></script>
-	<script src="assets/vendor/toastr/toastr.min.js"></script>
 	<script src="assets/scripts/klorofil-common.js"></script>
 </body>
 
